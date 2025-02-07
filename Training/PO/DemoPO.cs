@@ -158,6 +158,10 @@ namespace Training.PO
 
         internal void UpdateFormResult(string docNbr, string formResult)
         {
+
+            string connStr = System.Configuration.
+                ConfigurationManager.ConnectionStrings["connTOERP"].ConnectionString;
+            m_db = new Ede.Uof.Utility.Data.DatabaseHelper(connStr);
             string cmdTxt = @"  UPDATE [dbo].[TB_DEMO_DLL_FORM]  
                              SET 
 	                             [FORM_RESULT] = @FORM_RESULT  
