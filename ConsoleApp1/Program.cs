@@ -28,7 +28,7 @@ namespace ConsoleApp1
             Console.WriteLine(formInfo);
             WKF.Wkf wkf = new WKF.Wkf();
             result = wkf.SendForm(token, formInfo);
-
+            wkf.SignNext()
             Console.WriteLine(result);
 
         }

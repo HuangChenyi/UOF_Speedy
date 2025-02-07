@@ -52,5 +52,9 @@ namespace Training.UCO
             m_DemoPO.UpdateFormResult(docNbr, formResult);
         }
 
+        internal string GetUsingVerionId(string formName)
+        {
+            return m_DemoPO.GetUsingVerionId(formName);
+        }
     }
 }

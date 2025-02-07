@@ -173,6 +173,19 @@ namespace Training.PO
             this.m_db.ExecuteNonQuery(cmdTxt);
         }
 
+        internal string GetUsingVerionId(string formName)
+        {
+            string cmdTxt = @"select 
+USING_VERSION_ID from TB_WKF_FORM
+where FORM_NAME=@FORM_NAME";
 
+            this.m_db.AddParameter("FORM_NAME", formName);
+            object obj = this.m_db.ExecuteScalar(cmdTxt);
+
+            if (obj == null)
+                return "";
+            else
+                return obj.ToString();
+        }
     }
 }
