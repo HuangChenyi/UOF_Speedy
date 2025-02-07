@@ -56,5 +56,20 @@ namespace Training.UCO
         {
             return m_DemoPO.GetUsingVerionId(formName);
         }
+
+        internal void InsertSignForm(string aFormNbr, string bFormNbr)
+        {
+            m_DemoPO.InsertSignForm(aFormNbr, bFormNbr);
+        }
+
+        public DataTable GetSignForm(string aformNbr)
+        {
+            return m_DemoPO.GetSignForm(aformNbr);
+        }
+
+        internal void DeleteSignForm(string formNumber)
+        {
+            m_DemoPO.DeleteSignForm(formNumber);
+        }
     }
 }

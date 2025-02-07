@@ -59,6 +59,12 @@ Type:{resultXE.Element("Exception").Element("Type").Value}";
                         throw new Exception(error);
 
                     }
+                    else
+                    {
+                        string formNumber = resultXE.Element("FormNumber").Value;
+                        DemoUCO uco = new DemoUCO();
+                        uco.InsertSignForm(applyTask.FormNumber, formNumber);
+                    }
                 }
 
                

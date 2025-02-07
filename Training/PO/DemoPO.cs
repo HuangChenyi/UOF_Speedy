@@ -187,5 +187,44 @@ where FORM_NAME=@FORM_NAME";
             else
                 return obj.ToString();
         }
+
+        internal void InsertSignForm(string aFormNbr, string bFormNbr)
+        {
+            string cmdTxt = @"INSERT TB_SIGN_FORM
+SELECT @aFormNbr,@bFormNbr";
+
+            this.m_db.AddParameter("@aFormNbr", aFormNbr);
+            this.m_db.AddParameter("@bFormNbr", bFormNbr);
+
+            this.m_db.ExecuteNonQuery(cmdTxt);
+        }
+
+        internal DataTable GetSignForm(string aformNbr)
+        {
+            string cmdTxt = @"SELECT 
+A_FORM_NBR,B_FORM_NBR
+FROM
+TB_SIGN_FORM
+WHERE A_FORM_NBR=@A_FORM_NBR";
+
+            this.m_db.AddParameter("@A_FORM_NBR", aformNbr);
+
+            DataTable dt = new DataTable();
+
+            dt.Load(this.m_db.ExecuteReader(cmdTxt));
+
+            return dt;
+        }
+
+        internal void DeleteSignForm(string formNumber)
+        {
+            string cmdTxt = @"
+DELETE TB_SIGN_FORM
+WHERE B_FORM_NBR=@B_FORM_NBR";
+
+            this.m_db.AddParameter("@B_FORM_NBR", formNumber);
+
+            this.m_db.ExecuteNonQuery(cmdTxt);
+        }
     }
 }

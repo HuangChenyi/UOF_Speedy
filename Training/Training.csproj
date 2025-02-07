@@ -108,6 +108,7 @@
     <Compile Include="Trigger\DemoForm\SendFormSignTrigger.cs" />
     <Compile Include="Trigger\DemoForm\StartFormTrigger.cs" />
     <Compile Include="Trigger\LabForm\EndFormTrigger.cs" />
+    <Compile Include="Trigger\SignForm\EndFormTrigger.cs" />
     <Compile Include="UCO\AutoNbr.cs" />
     <Compile Include="UCO\DemoUCO.cs" />
   </ItemGroup>
