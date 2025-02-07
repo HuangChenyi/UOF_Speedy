@@ -117,7 +117,7 @@
             </Tag>
           </Condition>
         </FieldItem>
-		    <!-- ==Start 表單發佈審核 Start== -->		
+        <!-- ==Start 表單發佈審核 Start== -->
         <!--<FieldItem DesignUI="~/WKF/FormManagement/WKF_OptionalFields/SetupField_FormReleaseApprovalField.aspx" WriteUI="~/WKF/FormManagement/WKF_OptionalFields/FormReleaseApprovalFieldUC.ascx" FieldName="FormReleaseApprovalField">
           <Display>
             <Value Culture="zh-TW" Name="表單發佈審核欄位" />
@@ -150,7 +150,7 @@
           </Condition>
         </FieldItem>
         -->
-		    <!-- ==End 表單發佈審核 End== -->
+        <!-- ==End 表單發佈審核 End== -->
         <!-- ==Start 差勤表單V1 Start== -->
         <FieldItem DesignUI="~/EIP/Duty/WKFOptionalFields/SetupField_LeaveInfo.aspx" WriteUI="~/EIP/Duty/WKFOptionalFields/LeaveInfoUC.ascx" FieldName="LeaveInfo">
           <Display>
@@ -273,7 +273,7 @@
               <Display Clture="id" Name="BU" />
               <Display Clture="mt-MT" Name="BU" />
               <Display Clture="ja-JP" Name="BU" />
-           </Tag>
+            </Tag>
           </Condition>
         </FieldItem>
         <!-- ==End 差勤表單V1 End== -->
@@ -788,8 +788,8 @@
             </Tag>
           </Condition>
         </FieldItem>
-        <!-- ==End 電子公文表單 End== -->        
-        <!-- ==Start 文管表單 Start== -->        
+        <!-- ==End 電子公文表單 End== -->
+        <!-- ==Start 文管表單 Start== -->
         <FieldItem DesignUI="~/DMS/WKFOptionalFields/SetupField_DMSDocView.aspx" WriteUI="~/DMS/WKFOptionalFields/DMSDocViewUC.ascx" FieldName="DMSDocView">
           <Display>
             <Value Culture="zh-TW" Name="文件內容" />
@@ -801,9 +801,7 @@
             <Value Culture="ja-JP" Name="ファイル内容" />
           </Display>
         </FieldItem>
-        <!-- ==End 文管表單 End== -->                
-        
-        
+        <!-- ==End 文管表單 End== -->
         <!-- ==Start 104版差勤表單 Start== -->
         <!--<FieldItem MobileWriteUI="~/EIP/Duty/WKFOptionalFields104/OverTimeInfoMobileUC.ascx" DesignUI="~/EIP/Duty/WKFOptionalFields104/SetupField_OverTimeInfo.aspx" WriteUI="~/EIP/Duty/WKFOptionalFields104/OverTimeInfoUC.ascx" FieldName="OverTimeInfo104">
           <Display>
@@ -1411,7 +1409,15 @@
             </Tag>
           </Condition>
         </FieldItem>-->
-        <!-- ==End 104版差勤表單 End== -->        
+        <!-- ==End 104版差勤表單 End== -->
+        <FieldItem WriteUI="~/CDS/WKF_Fields/OptionFieldUC1.ascx" FieldName="optionField1">
+          <Display>
+            <Value Culture="zh-TW" Name="外掛欄位範例1" />
+            <Value Culture="zh-CN" Name="外掛欄位範例1" />
+            <Value Culture="en-US" Name="外掛欄位範例1" />
+            <Value Culture="vi" Name="外掛欄位範例1" />
+          </Display>
+        </FieldItem>
       </OptionalField>
     </Field>
   </WKF>
